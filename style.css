@@ -1,0 +1,865 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+html{
+  font-size: 10px;
+  scroll-behavior: smooth;
+  transition: scroll-behaviour 2s ease-in-out;
+}
+body{
+  background-color: rgba(0, 0, 0, 0.842);
+  color: white;
+  max-width: 100vw;
+}
+
+
+
+/* nav starts here  */
+nav{
+  max-width: 100%;
+  border-bottom: 1px solid grey;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 1rem;
+  flex-wrap: wrap;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.nav-left-a{
+  display: inline-block;
+  width: 12%;
+  margin-top: 0.5rem;
+}
+.logo{
+  max-width: 7rem;
+}
+.hamburger{
+  width: 25px;
+  align-self: center;
+  cursor: pointer;
+}
+hr{
+  border: none;
+  height: 2px;
+  background-color: white;
+  margin: 0.5rem 0px;
+}
+
+.mobile-ul{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  list-style: none;
+  top: 0;
+  left: 0;
+  border-radius: 0.5rem;
+  position: fixed;
+  z-index: 7000;
+  height: 100vh;
+  transform: translateX(100%);
+  transition: transform 1s ease-in-out, background 1s ease-in-out ;
+}
+.mobile-ul i{
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  transition: color 0.2s ease-in-out;
+}
+.mobile-ul i:hover{
+  color: orangered;
+}
+.mobile-ul.show{
+  transform: translateX(0%);
+  background-color: black;
+}
+.mobile-li{
+  margin: 1rem 0px;
+  cursor: pointer;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+nav .mobile-ul li:hover{
+  color: orangered;
+}
+.nav-pc{
+  display: none;
+}
+.pc-ul{
+  display: none;
+}
+.logo2{
+  display: none;
+}
+.stickyNav{
+  display: none;
+}
+.mobile-sticky-nav{
+  position: fixed;
+  z-index: 5000;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  transform: translateY(-100%);
+  background-color: rgb(32, 32, 32) ;
+}
+.mobile-sticky-nav.show{
+  transition: transform 1s ease-in-out;
+  transform: translateY(0%);
+}
+.mobile-sticky-nav .logo2{
+  display: block;
+}
+.mobile-sticky-nav .logo2 img{
+  display: block;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  z-index: 6000;
+  top: 5px;
+}
+/* nav ends here  */
+
+
+
+
+
+
+
+
+
+
+
+/* Graphics Designer starts here  */
+main{
+  max-width: 100%;
+  margin-top: 2rem;
+  padding-top: 5rem;
+  overflow: hidden;
+
+}
+.hero-section{
+  width: 100%;
+  height: 30rem;
+  position: relative;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(32, 32, 32) ;
+  padding-left: 4rem;
+}
+.designer-title{
+  font-size: 9rem;
+  position: absolute;
+  transform: translate(-40px, 0rem) rotate(-30deg);
+  color: rgba(58, 58, 58, 0.158);
+  z-index: 1;
+  user-select: none;
+  width: fit-content;
+}
+.designer-description{
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.designer-description .span-1{
+  display: inline;
+  font-size: 2.5rem;
+  color: rgb(94, 94, 94);
+  text-align: start;
+  padding-left: 0.5rem;
+  width: fit-content;
+}
+.designer-description .span-2{
+  display: inline-block;
+  color: white;
+  font-size: 6rem;
+  line-height: 5.5rem;
+  font-weight: 800;
+  text-align:start;
+  width:min-content;
+}
+.hero-section a{
+  width:fit-content;
+  margin-top: 1rem;
+  display: inline-block;
+}
+.hero-section a button{
+  background-color: orangered;
+  color: white;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  position:relative;
+  z-index: 2;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+.hero-section a button:hover{
+  background-color: rgb(204, 136, 11);
+}
+/* Graphics Designer section ends here */
+
+
+
+
+
+
+
+
+
+
+/* about me section starts here  */
+
+.about-me-text{
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.outer-about-text{
+  position: absolute;
+  font-size: 8rem;
+  z-index: 1;
+  color: rgba(78, 78, 78, 0.158);
+}
+.inner-about-text{
+  position: relative;
+  z-index: 2;
+  color: orangered;
+  font-size: 3.5rem;
+  margin-top: 1rem;
+}
+.about-author{
+  max-width: 100%;
+  margin-top: 3rem;
+}
+.author-pic{
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0rem;
+  margin-bottom: 2rem;
+}
+.author-pic-bg{
+  background-color: orangered;
+  height: 270px;
+  position: absolute;
+  width: 190px;
+  transform: rotate(2deg);
+  border-radius: 1px;
+}
+@keyframes author-pic-bg {
+  from{
+  transform: rotate(2deg);
+  }
+  to{
+  transform: rotate(-2deg)
+  }
+}
+.author-pic img{
+  width: 170px;
+  position: relative;
+  transform: rotate(-2deg);
+  /* animation: author-pic-img 1s ease-in-out;
+  animation-fill-mode: forwards; */
+}
+@keyframes author-pic-img {
+  from{
+    transform: rotate(-2deg);
+  }
+  to{
+    transform: rotate(2deg);
+  }
+}
+
+.author-info-1{
+  padding: 3rem 0rem;
+  padding: 2px 0rem;
+  text-align: center;
+}
+.author-info-1 h1{
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.author-info-1 h1 span{
+  color: orangered;
+}
+.author-info-1 p{
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 0rem 5rem;
+  margin-bottom: 2rem;
+}
+.author-info-2{
+  width: 100%;
+}
+.author-info-2 .div1{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0rem 2rem;
+}
+.author-info-2 .div1 .div1-1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+}
+.author-info-2 .div1 h1{
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: orangered;
+}
+.author-info-2 .div1 h1 span{
+  font-size: 1.5rem;
+  color: white;
+}
+.author-info-2 .div1 .div1-1 .email-span{
+  word-wrap: break-word;
+}
+.author-info-2 .div1-2{
+  margin: 1rem 0rem;
+}
+
+.author-info-2 .div2{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.author-info-2 .div2 h4{
+  color: orangered;
+  font-size: 2rem;
+}
+.author-info-2 .div2 p{
+  font-size: 1.5rem;
+  width: 60%;
+}
+.social-icons{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.social-icons i{
+  margin: 0rem 0.5rem;
+}
+.social-icons .icon-123{
+  font-size: 5rem;
+  margin: 0rem 0rem;
+}
+/* about me section ends here  */
+
+
+
+
+
+
+
+
+
+/* Skills section starts here  */
+
+.skills{
+  padding: 5rem 0rem;
+  background-color: rgb(34, 34, 34);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.skill-section{
+  margin: 0rem;
+}
+.skills-level{
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.skills-level .grandParent-level{
+  width: 190px;
+  margin: 1rem 0rem;
+}
+.grandParent-level h6{
+  font-size: 1rem;
+  display: inline-block;
+}
+.grandParent-level .parent-level{
+  background-color: rgb(22, 22, 22);
+  width: 100%;
+  height: 4px;
+}
+.grandParent-level .parent-level .child-level{
+  background-color: orangered;
+  height: 100%;
+}
+.Adobe-Photoshop{
+  width: 90%;
+}
+.Photography{
+ width: 97%;
+}
+.Adobe-Illustrator{
+  width: 95%;
+}
+.Adobe-Premiere-Pro{
+  width: 92%;
+}
+.Adobe-After-Effects{
+  width: 91%;
+}
+.Adobe-XD{
+  width: 95%;
+}
+.Autodesk-3ds-Max{
+  width: 97%;
+}
+.Cinema-4D{
+  width: 94%;
+}
+.skills .freelancing-tag{
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+}
+@keyframes adobePhotoshop {
+  from{
+    background-color: orangered;
+    width: 0%;
+  }
+  to{
+    background-color: orangered;
+    width: 90%;
+  }
+}
+@keyframes Photography {
+  from{
+    background-color: orangered;
+    width: 0%;
+  }
+  to{
+    background-color: orangered;
+    width: 97%;
+  }
+}
+@keyframes Adobe-Illustrator {
+  from{
+    background-color: orangered;
+    width: 0%;
+  }
+  to{
+    background-color: orangered;
+    width: 95%;
+  }
+}
+@keyframes Adobe-Premiere-Pro {
+  from{
+    background-color: orangered;
+    width: 0%;
+  }
+  to{
+    background-color: orangered;
+    width: 92%;
+  }
+}
+@keyframes Adobe-After-Effects {
+  from{
+    background-color: orangered;
+    width: 0%;
+  }
+  to{
+    background-color: orangered;
+    width: 91%;
+  }
+}
+@keyframes Adobe-XD {
+  from{
+    background-color: orangered;
+    width: 0%;
+  }
+  to{
+    background-color: orangered;
+    width: 95%;
+  }
+}
+@keyframes Autodesk-3ds-Max {
+  from{
+    background-color: orangered;
+    width: 0%;
+  }
+  to{
+    background-color: orangered;
+    width: 97%;
+  }
+}
+@keyframes Cinema-4D {
+  from{
+    background-color: orangered;
+    width: 0%;
+  }
+  to{
+    background-color: orangered;
+    width: 94%;
+  }
+}
+/* skills ends here  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* portfolio section starts here  */
+.PortFolio{
+  width: 100%;
+  min-height: 400px;
+}
+.PortFolio .logos-names{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0rem;
+  font-size: 1.2rem;
+}
+.logos-names a{
+  text-decoration-line: none;
+  color: white;
+}
+.logos-names a:first-child{
+  color: orangered;
+}
+.logos-names a.active{
+  color: orangered;
+}
+.swiper {
+  width: 100%;
+  height: 30rem;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+/* portfolio section ends here  */
+
+
+
+
+
+
+
+
+
+/* services section starts here  */
+
+.services{
+  width: 100%;
+  background-color: rgb(34, 34, 34);
+  margin-top: 5rem;
+  padding: 1rem 0rem 4rem 0rem
+}
+.services-list{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.service-s{
+  margin-bottom: 2rem;
+}
+.separated-srv{
+  max-width: 345px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 2rem;
+  background-color: rgba(78, 78, 78, 0.158);
+  margin: 1rem 0rem;
+  border-radius: 0.5rem;
+}
+.separated-srv i{
+  font-size: 4rem;
+  color: rgb(250, 116, 67);
+  margin-bottom: 1rem;
+}
+.separated-srv h4{
+  font-size: 1.7rem;
+}
+.separated-srv p{
+  font-size: 1.5rem;
+}
+/* services section ends here  */
+
+
+
+
+
+
+/* footer starts here  */
+footer{
+  width: 100%;
+  padding: 2rem 0rem;
+  background-color: rgb(214, 152, 19);
+
+}
+footer h1{
+  text-align: center;
+  font-size: 3.5rem;
+}
+.contact-info{
+  width: 100%;
+  display: flex;
+  row-gap: 1rem;
+  padding: 2rem 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-info-wrapper{
+  width: 33%;
+  height: fit-content;
+}
+.contact-info-wrapper h4{
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contact-info-wrapper h4 i{
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+}
+.contact-info-wrapper p{
+  padding-left: 2.6rem;
+}
+
+@media (min-width: 532px) {
+  html{
+    font-size: 11px;
+  }
+  .hamburger{
+    align-self: center;
+  } 
+}
+
+@media (min-width: 565px){
+  .skills-level{
+    width: 565px;
+  }
+}
+
+@media (min-width: 660px){
+  .designer-title{
+    transform: rotate(-20deg) translateX(30px) translateY(20px);
+  }
+}
+@media (min-width: 750px) {
+    .services-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+  }
+  .contact-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 3rem;
+  }
+  footer{
+    padding-left: 5rem
+  }
+}
+
+
+@media (min-width: 805px){
+  html{
+    font-size: 12px;
+  }
+  .designer-title{
+    font-size: 11rem;
+    transform: rotate(-15deg);
+    letter-spacing: 0.5rem;
+  }
+}
+
+@media (min-width: 865px) {
+
+  .hamburger{
+    display: none;
+  }
+  .mobile-ul.mobile-ul.show{
+    display: none;
+  }
+  nav{
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-pc{
+    display:block;
+    width: 70%;
+    height: 80px;
+    align-self: center;
+    transform: translateX(0rem);
+  }
+  .nav-pc .pc-ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: fit-content;
+    width: 100%;
+    padding: 0rem 2rem;
+  }  
+
+  .pc-ul li{
+    list-style-type: none;
+    font-size: 1.3rem;
+    margin: 0rem 1rem;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+  }
+  .pc-ul li:hover{
+    color: orangered;
+  }
+  .logo2{
+    width: 70px;
+    display: block;
+    height: fit-content;
+    align-self: center;
+  }
+  .logo2 img{
+    width: 100%;
+  }
+  .stickyNav{
+    position: fixed;
+    display: flex;
+    z-index: 4000;
+    margin: 0rem auto;
+    top: 0;
+    background-color: rgb(32, 32, 32);
+    transform: translateY(-100%);
+    width: 1054px;
+  }
+  .stickyNav.show{
+    transition: transform 1s ease-in-out;
+    transform: translateY(0%);
+  }
+  .mobile-sticky-nav{
+    display: none;
+  }
+}
+
+@media (min-width: 1065px) {
+  nav{
+    width: 1054px;
+    margin: 0rem auto;
+  }
+  main{
+    width: 1054px;
+    margin: 0rem auto;
+  }
+  footer{
+    width: 1054px;
+    margin: 0rem auto;
+  }
+  .stickyNav{
+    position: fixed;
+    z-index: 4000;
+    margin: 0rem 12.3rem;
+    top: 0;
+    background-color: rgb(32, 32, 32);
+    transform: translateY(-100%);
+  }
+  .stickyNav.show{
+    transition: transform 1s ease-in-out;
+    transform: translateY(0%);
+  }
+
+}
